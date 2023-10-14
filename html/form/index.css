@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(7, 151, 240);
+}
+.head{
+    color: white;
+    font-size: 40px; 
+}
+.surveyForm{
+    width: 350px;
+    text-align:start;
+    background-color: white;
+    padding: 20px;
+    
+}
+label{
+    font-size: 18px;
+}
+input,#dob,#country{
+    border: 1px solid black;
+    height: 30px;
+    margin-left: 10px;
+
+}
+#dob{
+    border: 1px solid black;
+    height: 30px;
+}
+#country{
+    border: 1px solid black;
+    height: 30px;
+}
+#submitBtn,#resetBtn{
+    height: 40px;
+    width: 100px;
+    background-color:  rgb(7, 151, 240);
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+#close{
+    height: 40px;
+    width: 100px;
+    background-color:  black;
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+#resetBtn{
+    margin-left: 40%;
+    background-color: green;
+}
+#male,#female{
+    transform: translateY(6px);
+}
+#error{
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
