@@ -13,17 +13,30 @@ public class RomanToInteger {
         romanMap.put('D', 500);
         romanMap.put('M', 1000);
 
-        int result = 0;
-        int prevValue = 0;
+        int result = romanMap.get(s.charAt(s.length() - 1));
+        int prevValue = result;
+        int count = 1;
 
-        for (int i = s.length() - 1; i >= 0; i--) {
+        for (int i = s.length() - 2; i >= 0; i--) {
             int currValue = romanMap.containsKey(s.charAt(i)) ? romanMap.get(s.charAt(i)) : 0;
+            if(currValue==prevValue){
+                count++;
+            }
+            else{
+                count=1;
+            }
+            if(count>3){
+                return -1;
+            }
             if(currValue == 0){
                 return -1;
             }
             if (currValue < prevValue) {
                 result -= currValue;
             } else {
+                if(result > currValue){
+                    return -1;
+                }
                 result += currValue;
             }
             
