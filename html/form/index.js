@@ -1,5 +1,4 @@
 function submitForm() {
-    // Get form values
     try{
     const firstName = document.getElementById("firstName").value;
     const lastName = document.getElementById("lastName").value;
@@ -13,7 +12,6 @@ function submitForm() {
         throw error;
     }
     document.getElementById("error").textContent = ""
-    // Display values in the popup
     document.getElementById("popupFirstName").textContent = firstName;
     document.getElementById("popupLastName").textContent = lastName;
     document.getElementById("popupDob").textContent = dob;
@@ -23,10 +21,8 @@ function submitForm() {
     document.getElementById("popupEmail").textContent = email;
     document.getElementById("popupMobile").textContent = mobile;
 
-    // Show the popup
     document.getElementById("popup").style.display = "block";
-
-    // Reset the form
+        
     resetForm();
     }
     catch(error){
@@ -35,12 +31,10 @@ function submitForm() {
 }
 
 function closePopup() {
-    // Close the popup
     document.getElementById("popup").style.display = "none";
 }
 
 function resetForm() {
-    // Reset all form values
     document.getElementById("error").textContent = ""
     document.getElementById("surveyForm").reset();
 }
