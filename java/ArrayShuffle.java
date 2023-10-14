@@ -10,11 +10,9 @@ public class ArrayShuffle {
     public static void shuffle(int[] array){
         Random random = new Random();
 
-        // Perform Fisher-Yates shuffle
         for (int i = array.length - 1; i > 0; i--) {
             int j = random.nextInt(i + 1);
 
-            // Swap array[i] and array[j]
             int temp = array[i];
             array[i] = array[j];
             array[j] = temp;
